@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    
+    
+<h1>SURVEY</h1>
+
+<form id="survey">
+    <h2>What animal do you like best?</h2>
+    <select id="q1">
+        <option value="1">Dog</option>
+        <option value="2">Cats</option>
+        <option value="3">Birds</option>
+        <option value="4">Reptiles</option>
+        <option value="5">Horses</option>
+    </select>
+
+    <h2>What activity do you like best?</h2>
+    <select id="q2">
+        <option value="1">Movies</option>
+        <option value="2">Video Games</option>
+        <option value="3">Books</option>
+        
+    </select>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+
+
+</body>
+</html>
+<script>
+    $("#survey").on("submit",function(event){
+        event.preventDefault();
+        var myObj = {
+            name: "Aimes",
+            scores: [
+                $("#q1").val(),
+                $("#q2").val()
+            ]
+        }
+        
+
+
+        console.log(myObj)
+
+        $.post("/api/friends",myObj,function(data){
+            console.log(data)
+        })
+
+
+    })
+
+</script>
