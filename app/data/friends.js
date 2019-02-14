@@ -17,13 +17,13 @@ var friends = [
       },
       
       {
-        "name":"Ahmed 2",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"John",
+        "photo":"https://2.bp.blogspot.com/-2APOwaK7hbE/Ttvj7Pq8tYI/AAAAAAAACq8/C9LNcWSUwJc/s1600/22_Iker-Casillas.jpg",
         "scores":[
             5,
             1,
             4,
-            4,
+            2,
             1,
             1,
             2,
@@ -34,12 +34,12 @@ var friends = [
       },
 
       {
-        "name":"Ahmed 3",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Frank",
+        "photo":"https://i.pinimg.com/736x/97/60/c4/9760c450e1452be2182b184eea37c7bc--aragon-music-artists.jpg",
         "scores":[
             5,
             5,
-            4,
+            3,
             4,
             5,
             1,
@@ -49,7 +49,53 @@ var friends = [
             5
           ]
       },
-
-      
+      {
+        "name":"Tom",
+        "photo":"https://pbs.twimg.com/profile_images/834442337854042112/ahyQRgkK_400x400.jpg",
+        "scores":[
+            5,
+            5,
+            2,
+            4,
+            5,
+            1,
+            1,
+            5,
+            5,
+            5
+          ]
+      },
+      {
+        "name":"Sally",
+        "photo":"https://i.pinimg.com/originals/cc/3e/5b/cc3e5b4810c208552a88da4e5ff639d1.jpg",
+        "scores":[
+            1,
+            3,
+            2,
+            4,
+            4,
+            1,
+            1,
+            2,
+            5,
+            5
+          ]
+      },
+      {
+        "name":"Carmen",
+        "photo":"http://s11.favim.com/orig/160520/aesthetic-girls-grunge-icons-Favim.com-4328676.jpeg",
+        "scores":[
+            1,
+            2,
+            2,
+            4,
+            5,
+            2,
+            5,
+            2,
+            5,
+            5
+          ]
+      },
 ]
 module.exports =friends;

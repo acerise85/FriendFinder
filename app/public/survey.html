@@ -1,63 +1,220 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-    
+    <!-- Compiled and minified CSS Matarialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript Matarialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!---JQuery Link-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    
-    
-<h1>SURVEY</h1>
 
-<form id="survey">
-    <h2>What animal do you like best?</h2>
-    <select id="q1">
-        <option value="1">Dog</option>
-        <option value="2">Cats</option>
-        <option value="3">Birds</option>
-        <option value="4">Reptiles</option>
-        <option value="5">Horses</option>
-    </select>
+    <div style="margin-left: 10%">
 
-    <h2>What activity do you like best?</h2>
-    <select id="q2">
-        <option value="1">Movies</option>
-        <option value="2">Video Games</option>
-        <option value="3">Books</option>
-        
-    </select>
-    <br><br>
-    <button type="submit">Submit</button>
-</form>
+        <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">SURVEY</h2>
 
 
+
+        <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Your Info</h5>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                        <label for="first_name"
+                            style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Your
+                            Name</label>
+                    </div>
+            </form>
+        </div>
+        <form action="#">
+            <div class="file-field input-field col s6">
+                <div class="btn">
+                    <span style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Link to your
+                        photo</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+
+        <div class="input-field col s12">
+            <form id="survey">
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Dogs are the best</h5>
+                <select id="q1" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I want to travel the
+                    world</h5>
+                <select id="q2" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I like to play board
+                    games</h5>
+                <select id="q3" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Music gets me through
+                    life</h5>
+                <select id="q4" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I like to meet friends
+                    over drinks</h5>
+                <select id="q5" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I love spontaneous
+                    getaways</h5>
+                <select id="q6" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I enjoy camping</h5>
+                <select id="q7" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I like watching movies
+                </h5>
+                <select id="q8" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I enjoy hiking</h5>
+                <select id="q9" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">I'm down for a party
+                </h5>
+                <select id="q10" class="browser-default" style="background-color:lightblue; width: 460px;">
+                    <option value="" disabled selected>Choice</option>
+                    <option value="1">1 (strongly agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (strongly disagree)</option>
+                </select>
+
+
+                <br><br>
+
+                <button class="btn waves-effect waves-light trigger" data-target="modal1" type="submit"
+                    name="action">
+                    <i class="material-icons right">Submit</i></button>
+            </form>
+
+            <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h1>Your New Friend Match Is:</h1>
+                    </div>
+                </div>
+            
+        </div>
+
+    </div>
 
 </body>
+
 </html>
 <script>
-    $("#survey").on("submit",function(event){
+    
+    $("#survey").on("submit", function (event) {
         event.preventDefault();
         var myObj = {
             name: "Aimes",
             scores: [
                 $("#q1").val(),
-                $("#q2").val()
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
             ]
+
         }
         
-
-
         console.log(myObj)
 
-        $.post("/api/friends",myObj,function(data){
+        $.post("/api/friends", myObj, function (data) {
             console.log(data)
         })
 
