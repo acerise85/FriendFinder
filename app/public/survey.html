@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Compiled and minified CSS Matarialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript Matarialize-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <!---JQuery Link-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -52,7 +51,7 @@
         <br><br>
 
         <div class="input-field col s12">
-            <form id="survey">
+            <form>
                 <h5 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Dogs are the best</h5>
                 <select id="q1" class="browser-default" style="background-color:lightblue; width: 460px;">
                     <option value="" disabled selected>Choice</option>
@@ -172,53 +171,70 @@
 
                 <br><br>
 
-                <button class="btn waves-effect waves-light trigger" data-target="modal1" type="submit"
+                <button class="btn waves-effect waves-light modal-trigger" data-target="modal1" id="survey" type="submit"
                     name="action">
                     <i class="material-icons right">Submit</i></button>
             </form>
 
-            <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h1>Your New Friend Match Is:</h1>
-                    </div>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4 id='name'>Modal Header</h4>
+                    <p>A bunch of text</p>
                 </div>
-            
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+            </div>
         </div>
-
+        
     </div>
-
+    
 </body>
 
-</html>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
 <script>
-    
-    $("#survey").on("submit", function (event) {
+        
+                $(document).ready(function () {
+                    $('.modal').modal();
+                });
+
+    $("#survey").on("click", function (event) {
         event.preventDefault();
+        console.log("HELLO")
+
         var myObj = {
             name: "Aimes",
             scores: [
-                $("#q1").val(),
-                $("#q2").val(),
-                $("#q3").val(),
-                $("#q4").val(),
-                $("#q5").val(),
-                $("#q6").val(),
-                $("#q7").val(),
-                $("#q8").val(),
-                $("#q9").val(),
-                $("#q10").val()
-            ]
+            +$("#q1").val(),
+            +$("#q2").val(),
+            +$("#q3").val(),
+            +$("#q4").val(),
+            +$("#q5").val(),
+            +$("#q6").val(),
+            +$("#q7").val(),
+            +$("#q8").val(),
+            +$("#q9").val(),
+            +$("#q10").val(),
+                
+            ],
 
+           
         }
-        
-        console.log(myObj)
-
+        console.log(myObj);
         $.post("/api/friends", myObj, function (data) {
-            console.log(data)
-        })
-
+            console.log("Submitted")
+        }).then(function (data) {
+            console.log(data);
+            // console.log($('.modal').modal())
+            $('#name').text(data.name);
+        });
 
     })
 
 </script>
+
+</html>

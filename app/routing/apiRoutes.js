@@ -11,11 +11,11 @@ router.get("/api/friends", function(req, res) {
 
 router.post("/api/friends",function(req, res){
 
-    var newFriendScores = req.body.scores
+    var newFriendScores = req.body.scores;
+    var someNumber = 100;
+    var chosenFriendIndex;
+    var diff = 0;
     for (let i = 0; i < friends.length; i++) {
-        var someNumber = 100
-        var chosenFriendIndex
-        var diff = 0
         for (let j = 0; j < friends[i].scores.length; j++) {
            diff += Math.abs(friends[i].scores[j], newFriendScores[j])
         }  
@@ -31,6 +31,8 @@ router.post("/api/friends",function(req, res){
         
     }
     res.send(friends[chosenFriendIndex])
+
+    
 })
 
   module.exports = router;
